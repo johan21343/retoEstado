@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Reto Academia X</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <style>
+      .Cuadro1 {
+        margin-left: 30px;
+        margin-top: 30px;
+        display: inline-block;
+        flex-wrap: nowrap;
+        border: double 2px rgb(173, 175, 179);
+      }
+      .Cuadro2 {
+        margin-left: 30px;
+        margin-top: 30px;
+        display: inline-block;
+        flex-wrap: nowrap;
+        border: double 2px rgb(173, 175, 179);
+      }
+      .Cuadro3 {
+        margin-left: 30px;
+        margin-top: 30px;
+        display: inline-block;
+        flex-wrap: nowrap;
+        border: double 2px rgb(173, 175, 179);
+      }
+
+      .title {
+        text-decoration: none;
+        margin-left: 130px;
+      }
+      .cubo {
+        width: 550px;
+        border-radius: 0px;
+      }
+      .h1 {
+        text-decoration: none;
+        margin-left: 250px;
+      }
+
+      .masmenos {
+        background: rgb(101, 95, 196);
+        font-size: xx-large;
+        border: none white 0px;
+        color: white;
+      }
+      #menos {
+        margin-left: 400px;
+        padding: 10px;
+      }
+      #mas {
+        margin-left: 50px;
+        padding: 10px;
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+      #cubo2 {
+        width: 550px;
+        height: 315px;
+      }
+      #cubo3 {
+        width: 550px;
+        height: 355px;
+      }
+
+      .Cantidad {
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Cuadro1">
+      <a href="33355"><img src="NS.png" class="cubo" id="cubo1" /></a>
+      <h2 class="title">Consola de Videojuegos</h2>
+      <p>
+        Esta es una consola de Videojuegos que entretiene a los programadores en
+        sus breaks
+      </p>
+      <h3 class="Cantidad">Cantidad Disponible: 5</h3>
+      <div id="root">
+        <script type="text/babel">
+          class Contar extends React.Component {
+            constructor(props) {
+              super(props);
+              this.state = { contar: 0 };
+            }
+            incrementar = () => {
+              this.setState((state) => {
+                if (state.contar < 5) {
+                  return { contar: state.contar + 1 };
+                }
+                return null; // No cambia el estado si contar es 5 o más
+              });
+            };
+
+            decrementar = () => {
+              this.setState((state) => {
+                if (state.contar > 0) {
+                  return { contar: state.contar - 1 };
+                }
+                return null; // No cambia el estado si contar es 0 o menos
+              });
+            };
+
+            render() {
+              return (
+                <div>
+                  <h1 class="h1">{this.state.contar}</h1>
+                  <button onClick={this.incrementar} class="masmenos" id="mas">
+                    +
+                  </button>
+                  <button
+                    onClick={this.decrementar}
+                    class="masmenos"
+                    id="menos"
+                  >
+                    -
+                  </button>
+                </div>
+              );
+            }
+          }
+
+          ReactDOM.render(<Contar />, document.getElementById("root"));
+        </script>
+      </div>
+    </div>
+    <div class="Cuadro2">
+      <a href="34472314"><img src="play 5.jpg" class="cubo" id="cubo2" /></a>
+      <h2 class="title">Consola de Videojuegos</h2>
+      <p>
+        Esta es una consola de Videojuegos que entretiene a los programadores en
+        sus breaks
+      </p>
+      <h3 class="Cantidad">Cantidad Disponible: 15</h3>
+      <div id="root2">
+        <script type="text/babel">
+          class Contar extends React.Component {
+            constructor(props) {
+              super(props);
+              this.state = { contar: 0 };
+            }
+            incrementar = () => {
+              this.setState((state) => {
+                if (state.contar < 15) {
+                  return { contar: state.contar + 1 };
+                }
+                return null; // No cambia el estado si contar es 5 o más
+              });
+            };
+
+            decrementar = () => {
+              this.setState((state) => {
+                if (state.contar > 0) {
+                  return { contar: state.contar - 1 };
+                }
+                return null; // No cambia el estado si contar es 0 o menos
+              });
+            };
+            render() {
+              return (
+                <div>
+                  <h1 class="h1">{this.state.contar}</h1>
+
+                  <button onClick={this.incrementar} class="masmenos" id="mas">
+                    +
+                  </button>
+                  <button
+                    onClick={this.decrementar}
+                    class="masmenos"
+                    id="menos"
+                  >
+                    -
+                  </button>
+                </div>
+              );
+            }
+          }
+          ReactDOM.render(<Contar />, document.getElementById("root2"));
+        </script>
+      </div>
+    </div>
+    <div class="Cuadro3">
+      <a href="34472314"><img src="xbox x.webp" class="cubo" id="cubo3" /></a>
+      <h2 class="title">Consola de Videojuegos</h2>
+      <p>
+        Esta es una consola de Videojuegos que entretiene a los programadores en
+        sus breaks
+      </p>
+      <h3 class="Cantidad">Cantidad Disponible: 9</h3>
+      <div id="root3">
+        <script type="text/babel">
+          class Contar extends React.Component {
+            constructor(props) {
+              super(props);
+              this.state = { contar: 0 };
+            }
+            incrementar = () => {
+              this.setState((state) => {
+                if (state.contar < 9) {
+                  return { contar: state.contar + 1 };
+                }
+                return null; // No cambia el estado si contar es 5 o más
+              });
+            };
+
+            decrementar = () => {
+              this.setState((state) => {
+                if (state.contar > 0) {
+                  return { contar: state.contar - 1 };
+                }
+                return null; // No cambia el estado si contar es 0 o menos
+              });
+            };
+            render() {
+              return (
+                <div>
+                  <h1 class="h1">{this.state.contar}</h1>
+
+                  <button onClick={this.incrementar} class="masmenos" id="mas">
+                    +
+                  </button>
+                  <button
+                    onClick={this.decrementar}
+                    class="masmenos"
+                    id="menos"
+                  >
+                    -
+                  </button>
+                </div>
+              );
+            }
+          }
+          ReactDOM.render(<Contar />, document.getElementById("root3"));
+        </script>
+      </div>
+    </div>
+    <div class="Cuadro3">
+      <a href="34472314"><img src="lite.jpg" class="cubo" id="cubo4" /></a>
+      <h2 class="title">Consola de Videojuegos</h2>
+      <p>
+        Esta es una consola de Videojuegos que entretiene a los programadores en
+        sus breaks
+      </p>
+      <h3 class="Cantidad">Cantidad Disponible: 7</h3>
+      <div id="root4">
+        <script type="text/babel">
+          class Contar extends React.Component {
+            constructor(props) {
+              super(props);
+              this.state = { contar: 0 };
+            }
+            incrementar = () => {
+              this.setState((state) => {
+                if (state.contar < 7) {
+                  return { contar: state.contar + 1 };
+                }
+                return null; // No cambia el estado si contar es 5 o más
+              });
+            };
+
+            decrementar = () => {
+              this.setState((state) => {
+                if (state.contar > 0) {
+                  return { contar: state.contar - 1 };
+                }
+                return null; // No cambia el estado si contar es 0 o menos
+              });
+            };
+            render() {
+              return (
+                <div>
+                  <h1 class="h1">{this.state.contar}</h1>
+
+                  <button onClick={this.incrementar} class="masmenos" id="mas">
+                    +
+                  </button>
+                  <button
+                    onClick={this.decrementar}
+                    class="masmenos"
+                    id="menos"
+                  >
+                    -
+                  </button>
+                </div>
+              );
+            }
+          }
+          ReactDOM.render(<Contar />, document.getElementById("root4"));
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
